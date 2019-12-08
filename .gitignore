@@ -86,3 +86,4 @@ $RECYCLE.BIN/
 
 application/config/database.php
 luar/*
+exclude.txt
