@@ -69,12 +69,12 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="javascript:void(0)" onclick="scrollToDownload()">
-              <i class="material-icons">cloud_download</i> Download
+              <i class="material-icons">cloud_download</i> Unduh Brosur
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank" data-original-title="Follow us on Twitter">
-              <i class="fa fa-twitter"></i>
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank" data-original-title="email kami">
+              <i class="fa fa-envelope"></i>
             </a>
           </li>
           <li class="nav-item">
@@ -91,15 +91,15 @@
       </div>
     </div>
   </nav>
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('<?=base_url()?>assets/img/profile_city.jpg')">
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('<?=base_url()?>assets/img/masjid.jpg')">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h1 class="title">Kenali kami</h1>
-          <h4>Every landing page needs a small description after the big bold title, that&apos;s why we added this text here. Add here all the information that can make you or your product create the first impression.</h4>
+          <h1 class="title">Assalamulaikum..</h1>
+          <h4>Laman Penerimaan Santri Baru PSB, adalah laman web yang dibuat untuk calon santriwan dan calon santriwati melukukan pendaftaran secara online.</h4>
           <br>
-          <a href="https://www.youtube.com/watch?v=HxXyx8B6LQU" target="_blank" class="btn btn-success btn-raised btn-lg">
-            <i class="fa fa-youtube text-danger"></i>  Tonton Vidio Kami
+          <a href="https://www.youtube.com/watch?v=HxXyx8B6LQU" target="_blank" class="btn btn-success btn-raised">
+            <i class="fa fa-youtube text-danger"></i> &nbsp Tonton kami di youtube
           </a>
         </div>
       </div>
