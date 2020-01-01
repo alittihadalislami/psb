@@ -95,7 +95,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h1 class="title">Assalamulaikum..</h1>
+          <h2 class="title">Assalamulaikum..</h2>
           <h4>Laman Penerimaan Santri Baru PSB, adalah laman web yang dibuat untuk calon santriwan dan calon santriwati melukukan pendaftaran secara online.</h4>
           <br>
           <a href="https://www.youtube.com/watch?v=HxXyx8B6LQU" target="_blank" class="btn btn-success btn-raised">
