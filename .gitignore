@@ -85,5 +85,6 @@ $RECYCLE.BIN/
 
 
 application/config/database.php
+application/config/config.php
 luar/*
 exclude.txt
