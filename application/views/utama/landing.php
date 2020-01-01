@@ -39,7 +39,7 @@
     <div class="container">
       <div class="navbar-translate">
         <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html">
-          Ma'had Al Ittihad Al Islami </a>
+          PPDB Ma'had Al Ittihad Al Islami </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
           <span class="navbar-toggler-icon"></span>
