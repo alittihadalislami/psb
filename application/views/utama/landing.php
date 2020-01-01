@@ -50,8 +50,8 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link">
-              <i class="material-icons">cloud_download</i> Isi Formulir
+            <a class="nav-link" href="#">
+              <i class="material-icons">edit</i> Isi Formulir
             </a>
           </li>
           <li class="dropdown nav-item">
