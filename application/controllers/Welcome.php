@@ -5,6 +5,6 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('utama/utama');
+		$this->load->view('utama/landing');
 	}
 }
