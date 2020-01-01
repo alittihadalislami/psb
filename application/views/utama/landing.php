@@ -221,20 +221,28 @@
       <div class="section section-contacts">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto">
-            <h2 class="text-center title">Work with us</h2>
-            <h4 class="text-center description">Divide details about your product or agency work into parts. Write a few lines about each one and contact us about any further collaboration. We will responde get back to you in a couple of hours.</h4>
+            <h2 class="text-center title">Pendaftaran Santri</h2>
+            <h4 class="text-center description">Silahkan masukkan data-data calon santri pada kolom yang disediakan dibawah ini, sesuai dengan dokumen yang ada. seperti Kartu keluarga, Raport dan Ijazah jika sudah menerima ijazah terakhir</h4>
             <form class="contact-form">
+              <div class="row">
+                <div class="col-md">
+                  <div class="form-group">
+                    <label for="exampleMessage" class="bmd-label-floating">Nama Calon Santri</label>
+                    <input type="text" class="form-control" id="exampleMessage"></input>
+                  </div>
+                </div>
+              </div>
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label class="bmd-label-floating">Your Name</label>
-                    <input type="email" class="form-control">
+                    <label class="bmd-label-floating">Nomor Induk Kependudukan (NIK)</label>
+                    <input type="text" class="form-control">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label class="bmd-label-floating">Your Email</label>
-                    <input type="email" class="form-control">
+                    <label class="bmd-label-floating">Nomor Induk Siswa Nasional (NISN)</label>
+                    <input type="text" class="form-control">
                   </div>
                 </div>
               </div>
