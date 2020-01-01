@@ -88,4 +88,3 @@ application/config/database.php
 application/config/config.php
 luar/*
 exclude.txt
-application/config/config.php
