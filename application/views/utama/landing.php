@@ -247,12 +247,12 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="exampleMessage" class="bmd-label-floating">Your Message</label>
+                <label for="exampleMessage" class="bmd-label-floating">Alamat</label>
                 <textarea type="email" class="form-control" rows="4" id="exampleMessage"></textarea>
               </div>
               <div class="row">
                 <div class="col-md-4 ml-auto mr-auto text-center">
-                  <button class="btn btn-primary btn-raised">
+                  <button class="btn btn-success btn-raised">
                     Send Message
                   </button>
                 </div>
