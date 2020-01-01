@@ -28,17 +28,33 @@
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <!-- CSS Files -->
+   <!-- CSS Files -->
   <link href="<?=base_url()?>assets/css/material-kit.css?v=2.0.6" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="<?=base_url()?>assets/demo/demo.css" rel="stylesheet" />
+  <style>
+  .is-focused .form-control {
+    margin-top:8px;
+    padding: 5px;
+    font-weight:bold;
+    font-size: 18px;
+    background-color:white;
+    background-image: 
+    linear-gradient(0deg,green 2px,rgba(156,39,176,0) 0),
+    linear-gradient(0deg,#d2d2d2 1px,hsla(0,0%,82%,0) 0);
+  }
+  .myclass 
+  {
+      text-transform:capitalize;
+  }
+  </style>
 </head>
 
 <body class="landing-page sidebar-collapse">
   <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
       <div class="navbar-translate">
-        <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html">
+        <a class="navbar-brand" href="<?=base_url()?>">
           <strong>PSB</strong> Ma'had Al Ittihad Al Islami </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
@@ -50,7 +66,7 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#form">
               <i class="material-icons">edit</i> Isi Formulir
             </a>
           </li>
@@ -78,20 +94,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank" data-original-title="Like us on Facebook">
-              <i class="fa fa-facebook-square"></i>
-            </a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" data-original-title="Follow us on Instagram">
-              <i class="fa fa-instagram"></i>
+              <i class="fas fa-instagram"></i>
             </a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('<?=base_url()?>assets/img/masjid.jpg')">
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('<?=base_url()?>assets/img/masjid2.jpg')">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -105,12 +116,12 @@
       </div>
     </div>
   </div>
-  <div class="main main-raised">
+  <div class="main main-raised badge-pill">
     <div class="container">
       <div class="section text-center">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto">
-            <h2 class="title">Let&apos;s talk product</h2>
+            <h2 class="title">Program Unggulan</h2>
             <h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn&apos;t scroll to get here. Add a button if you want the user to see more.</h5>
           </div>
         </div>
@@ -118,10 +129,10 @@
           <div class="row">
             <div class="col-md-4">
               <div class="info">
-                <div class="icon icon-info">
-                  <i class="material-icons">chat</i>
+                <div class="icon icon-success">
+                <i class="fas fa-quran"></i>
                 </div>
-                <h4 class="info-title">Free Chat</h4>
+                <h4 class="info-title">Tahfidzul Qur'an</h4>
                 <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
               </div>
             </div>
@@ -154,7 +165,7 @@
               <div class="team-player">
                 <div class="card card-plain">
                   <div class="col-md-6 ml-auto mr-auto">
-                    <img src="<?=base_url()?>assets/img/faces/avatar.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                    <img src="<?=base_url()?>assets/img/faces/1.jpg" alt="Thumbnail Image" class=" rounded-circle img-fluid">
                   </div>
                   <h4 class="card-title">Gigi Hadid
                     <br>
@@ -176,7 +187,7 @@
               <div class="team-player">
                 <div class="card card-plain">
                   <div class="col-md-6 ml-auto mr-auto">
-                    <img src="<?=base_url()?>assets/img/faces/christian.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                    <img src="<?=base_url()?>assets/img/faces/2.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                   </div>
                   <h4 class="card-title">Christian Louboutin
                     <br>
@@ -197,7 +208,7 @@
               <div class="team-player">
                 <div class="card card-plain">
                   <div class="col-md-6 ml-auto mr-auto">
-                    <img src="<?=base_url()?>assets/img/faces/kendall.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                    <img src="<?=base_url()?>assets/img/faces/4.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                   </div>
                   <h4 class="card-title">Kendall Jenner
                     <br>
@@ -218,17 +229,17 @@
           </div>
         </div>
       </div>
-      <div class="section section-contacts">
-        <div class="row">
-          <div class="col-md-8 ml-auto mr-auto">
+      <div class="section section-contacts px-3 mb-5" id="form">
+        <div class="row" style="background-color: whitesmoke; width: fit-content;">
+          <div class="col-md ml-auto mr-auto">
             <h2 class="text-center title">Pendaftaran Santri</h2>
-            <h4 class="text-center description">Silahkan masukkan data-data calon santri pada kolom yang disediakan dibawah ini, sesuai dengan dokumen yang ada. seperti Kartu keluarga, Raport dan Ijazah jika sudah menerima ijazah terakhir</h4>
+            <h4 class="text-center description text-dark">Silahkan masukkan data-data calon santri pada kolom yang disediakan dibawah ini, sesuai dengan dokumen yang ada. seperti Kartu keluarga, Raport dan Ijazah jika sudah menerima ijazah terakhir</h4>
             <form class="contact-form">
               <div class="row">
                 <div class="col-md">
                   <div class="form-group">
-                    <label for="exampleMessage" class="bmd-label-floating">Nama Calon Santri</label>
-                    <input type="text" class="form-control" id="exampleMessage"></input>
+                    <label for="exampleMessage" class="bmd-label-floating text-secondary">Nama Calon Santri</label>
+                    <input type="text" class="form-control myclass" id="exampleMessage"></input>
                   </div>
                 </div>
               </div>
@@ -237,23 +248,44 @@
                   <div class="form-group">
                     <label class="bmd-label-floating">Nomor Induk Kependudukan (NIK)</label>
                     <input type="text" class="form-control">
+                    <span class="bmd-help">Sesuikan dengan Kartu Keluarga</span>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label class="bmd-label-floating">Nomor Induk Siswa Nasional (NISN)</label>
                     <input type="text" class="form-control">
+                    <span class="bmd-help">Sesuikan dengan Raport / Ijasah</span>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="exampleMessage" class="bmd-label-floating">Alamat</label>
-                <textarea type="email" class="form-control" rows="4" id="exampleMessage"></textarea>
+                <textarea type="email" class="form-control myclass" rows="4" id="exampleMessage"></textarea>
               </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="">
+                    Option one is this
+                    <span class="form-check-sign">
+                        <span class="check"></span>
+                    </span>
+                </label>
+            </div>
               <div class="row">
                 <div class="col-md-4 ml-auto mr-auto text-center">
                   <button class="btn btn-success btn-raised">
-                    Send Message
+                    Simpan Data
                   </button>
                 </div>
               </div>
@@ -268,23 +300,15 @@
       <nav class="float-left">
         <ul>
           <li>
-            <a href="https://www.creative-tim.com">
-              Creative Tim
+            <a class="text-success" href="https://wa.me/6285655129098?text=Assalamulaikum%0Asaya%20Wali%20/%20Orang%20tua%20Ahmad%20asal%20Jeddah">
+              <i class="fa fa-whatsapp" aria-hidden="true"></i>
+              Panitia PSB
             </a>
           </li>
           <li>
-            <a href="https://creative-tim.com/presentation">
-              About Us
-            </a>
-          </li>
-          <li>
-            <a href="http://blog.creative-tim.com">
-              Blog
-            </a>
-          </li>
-          <li>
-            <a href="https://www.creative-tim.com/license">
-              Licenses
+            <a class="text-success" href="https://wa.me/6285655129098?text=Assalamulaikum%0Asaya%20Wali%20/%20Orang%20tua%20Ahmad%20asal%20Jeddah">
+              <i class="fa fa-whatsapp" aria-hidden="true"></i>
+              Group Wali Calon Santri
             </a>
           </li>
         </ul>
@@ -293,8 +317,7 @@
         &copy;
         <script>
           document.write(new Date().getFullYear())
-        </script>, made with <i class="material-icons">favorite</i> by
-        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+        </script> - <a href="https://www.alittihadalislami.org" target="_blank">Ma'had Al Ittidah Al Islami</a>.
       </div>
     </div>
   </footer>
@@ -311,6 +334,9 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
   <script src="<?=base_url()?>assets/js/material-kit.js?v=2.0.6" type="text/javascript"></script>
+
+  <script>
+  </script>
 </body>
 
 </html>
