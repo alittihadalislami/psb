@@ -1,18 +1,3 @@
-<!--
- =========================================================
- * Material Kit - v2.0.6
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/material-kit
- * Copyright 2019 Creative Tim (http://www.creative-tim.com)
-   Licensed under MIT (https://github.com/creativetimofficial/material-kit/blob/master/LICENSE.md)
-
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,9 +28,13 @@
     linear-gradient(0deg,green 2px,rgba(156,39,176,0) 0),
     linear-gradient(0deg,#d2d2d2 1px,hsla(0,0%,82%,0) 0);
   }
-  .myclass 
+  .capital 
   {
-      text-transform:capitalize;
+    text-transform:capitalize;
+  }
+  .bmd-form-group label {
+    font-size: 0.975rem;
+    color:red;
   }
   </style>
 </head>
@@ -230,16 +219,16 @@
         </div>
       </div>
       <div class="section section-contacts px-3 mb-5" id="form">
-        <div class="row" style="background-color: whitesmoke; width: fit-content;">
+        <div class="row p-5" style="border: 1px solid green; width: fit-content;">
           <div class="col-md ml-auto mr-auto">
-            <h2 class="text-center title">Pendaftaran Santri</h2>
+            <h2 class="text-center">Pendaftaran Santri</h2>
             <h4 class="text-center description text-dark">Silahkan masukkan data-data calon santri pada kolom yang disediakan dibawah ini, sesuai dengan dokumen yang ada. seperti Kartu keluarga, Raport dan Ijazah jika sudah menerima ijazah terakhir</h4>
             <form class="contact-form">
               <div class="row">
                 <div class="col-md">
                   <div class="form-group">
-                    <label for="exampleMessage" class="bmd-label-floating text-secondary">Nama Calon Santri</label>
-                    <input type="text" class="form-control myclass" id="exampleMessage"></input>
+                    <label for="nama" class="bmd-label-floating text-secondary">Nama Calon Santri</label>
+                    <input type="text" class="form-control text-capitalize" id="nama" name="nama"></input>
                   </div>
                 </div>
               </div>
@@ -247,21 +236,21 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label class="bmd-label-floating">Nomor Induk Kependudukan (NIK)</label>
-                    <input type="text" class="form-control">
+                    <input type="number" class="form-control" name="nik">
                     <span class="bmd-help">Sesuikan dengan Kartu Keluarga</span>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label class="bmd-label-floating">Nomor Induk Siswa Nasional (NISN)</label>
-                    <input type="text" class="form-control">
+                    <label for="nisn" class="bmd-label-floating">Nomor Induk Siswa Nasional (NISN)</label>
+                    <input type="number" class="form-control text-capitalize" id="nisn" name="nisn">
                     <span class="bmd-help">Sesuikan dengan Raport / Ijasah</span>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="exampleMessage" class="bmd-label-floating">Alamat</label>
-                <textarea type="email" class="form-control myclass" rows="4" id="exampleMessage"></textarea>
+                <textarea type="email" class="form-control text-capitalize" rows="4" id="exampleMessage"></textarea>
               </div>
               <div class="form-group">
                 <label for="exampleFormControlSelect1">Example select</label>
