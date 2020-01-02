@@ -73,7 +73,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?=base_url()?>assets/file/brosur_alittihad_2020-k.pdf" download>
+            <a class="nav-link" href="<?=base_url()?>assets/file/brosur_alittihad_2020-k.pdf" download="Brosur Ma'had Al Ittihad Al Islami">
               <i class="material-icons">cloud_download</i> Unduh Brosur
             </a>
           </li>
