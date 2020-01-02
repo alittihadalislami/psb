@@ -96,10 +96,10 @@
       <div class="row">
         <div class="col-md-6">
           <h2 class="title">Assalamulaikum..</h2>
-          <h4>Laman Penerimaan Santri Baru PSB, adalah laman web yang dibuat untuk calon santriwan dan calon santriwati melukukan pendaftaran secara online.</h4>
+          <h4>Laman Penerimaan Santri Baru PSB, adalah laman web yang dibuat untuk calon santriwan dan calon santriwati melakukan pendaftaran secara online.</h4>
           <br>
-          <a href="https://www.youtube.com/watch?v=HxXyx8B6LQU" target="_blank" class="btn btn-success btn-raised">
-            <i class="fa fa-youtube text-danger"></i> &nbsp Tonton kami di youtube
+          <a href="https://www.youtube.com/watch?v=v1uJhpAEphQ" target="_blank" class="btn btn-success btn-raised">
+          Kenali kami dengan melihat profil kami di &nbsp <i class="fa fa-youtube text-danger" style="font-size:20px"></i>  
           </a>
         </div>
       </div>
