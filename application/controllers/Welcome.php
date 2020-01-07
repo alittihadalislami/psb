@@ -10,7 +10,8 @@ class Welcome extends CI_Controller {
 
 	public function hitung()
 	{
-		$digit = rand(2,5);
+		$digit = rand(2,5); 
+
 
 		switch ($digit) {
 			case $digit == 2:
@@ -51,7 +52,6 @@ class Welcome extends CI_Controller {
 		echo '<hr>';
 		echo $nilai * $nilai2;
 
-		echo "<a href='javascript:window.location.href=window.location.href'>";
 	}
 }
 
