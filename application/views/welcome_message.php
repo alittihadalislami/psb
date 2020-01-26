@@ -3,6 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!doctype html>
 <html lang="en">
   <head>
+  	<!-- Favicon -->
+  	<link rel="shortcut icon" href="<?=base_url()?>assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="<?=base_url()?>assets/img/favicon.ico" type="image/x-icon">
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Latihan Perkalian</title>
   </head>
   <body>
     
