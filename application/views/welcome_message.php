@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			?>
 			<table class="table table-bordered table-sm text-center">
-				<tr class="font-weight-bolder">
+				<tr class="font-weight-bolder" style="line-height: 40px; height: 40px; width: 30px">
 					<?php for ($i=0; $i<$ch; $i++): ?>
 						<?php if ($i>=$selisih): ?>
 							<td><?=$nl1[$i-$selisih]?></td>	
@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<?php endif ?>
 					<?php endfor ?>
 				</tr>
-				<tr class="font-weight-bolder">
+				<tr class="font-weight-bolder" style="line-height: 40px; height: 40px;">
 					<?php for ($i=0; $i<$ch; $i++): ?>
 						<?php if ($i>=$selisih): ?>
 							<td><?=$nl2[$i-$selisih]?></td>	
@@ -66,7 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						for ($i=0; $i<$ch ; $i++) { 
 							$x = $slsh-$line;
 							if ($i>=$x) {
-								echo '<td style="font-size:10px; line-height: 10px">';
+								echo '<td style="font-size:15px; font-weight:bold; line-height: 15px; color:grey;">';
 									if (isset($angka[$i-$x]) ) {
 											echo $angka[$i-$x];
 									}else{
@@ -83,9 +83,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					}
 				?> 
 				<tr><td colspan="<?= $ch ?>"></td></tr>
-				<tr>
+				<tr class="font-weight-bolder" style="line-height: 40px; height: 40px; font-size: 20px">
 					<?php foreach ($hsl as $v): ?>
-						<td style="font-weight: bolder;"><?=$v?></td>
+						<td><?=$v?></td>
 					<?php endforeach ?>
 				</tr>
 			</table>
@@ -96,8 +96,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
     <script>
     	$(document).ready(function(){
     		var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
