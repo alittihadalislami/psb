@@ -92,7 +92,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</tr>
 			</table>
 		</div>
-    	<div id="Timer" class="btn btn-block btn-success">Tendes</div>
+    	<div id="Timer" class="btn btn-block btn-light">Mulai</div>
+    	<div id="start" class="btn btn-block btn-success">Selesai</div>
     	</div>
     </div>
 
@@ -112,12 +113,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			var start = new Date;
 
-			setInterval(function() {
-				let detik = (new Date - start) / 1000 / 60 + " Menit";
-				$('#Timer').on('click', function(){
-					$('#Timer').text(detik);
-				})
-			}, 1000);
+			$('#start').hide();
+
+			$('#Timer').on('click', function(){
+				
+				$('#start').show(10000);
+
+				setInterval(function() {
+					let detik = (new Date - start) / 1000 / 60 ;
+					$('#Timer').text(detik.toFixed(3));
+
+					$('#start').on('click', function(){
+						$('#start').text(detik.toFixed(2) + ' Menit');
+						$('#Timer').hide();
+					})
+
+				}, 1000);
+			})
 			
 
     	})
