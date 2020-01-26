@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="row container mt-5 mx-auto px-1">
     	<div id="date" class="col-xl-12 mb-3"></div>
     	<div class="col-xl-4">
-    	<div>
+    	<div class="shadow p1">
 			<?php 	
 
 					$nl1 = str_split($nilai);
@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						$jml_angka = count($angka);
 						$slsh= $ch - $jml_angka;
 
-						echo "<tr>";
+						echo '<tr class="baris">';
 
 						for ($i=0; $i<$ch ; $i++) { 
 							$x = $slsh-$line;
@@ -85,15 +85,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					$line += 1;
 					}
 				?> 
-				<tr class="font-weight-bolder" style="line-height: 40px; height: 40px; font-size: 20px; border-top: 3px solid black">
+				<tr class="baris font-weight-bolder" style="line-height: 40px; height: 40px; font-size: 20px; border-top: 3px solid black">
 					<?php foreach ($hsl as $v): ?>
 						<td><?=$v?></td>
 					<?php endforeach ?>
 				</tr>
 			</table>
 		</div>
-    	<div id="Timer" class="btn btn-block btn-light">Mulai</div>
-    	<div id="start" class="btn btn-block btn-success">Selesai</div>
+    	<div id="Timer" class="shadow btn btn-block btn-light">Mulai</div>
+    	<div id="start" class="shadow btn btn-block btn-success">Selesai</div>
     	</div>
     </div>
 
@@ -114,18 +114,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			var start = new Date;
 
 			$('#start').hide();
+			$('.baris').hide();
 
 			$('#Timer').on('click', function(){
 				
-				$('#start').show(10000);
+				$('#start').show();
 
 				setInterval(function() {
 					let detik = (new Date - start) / 1000 / 60 ;
 					$('#Timer').text(detik.toFixed(3));
 
 					$('#start').on('click', function(){
-						$('#start').text(detik.toFixed(2) + ' Menit');
+						$('.baris').show("slow");
 						$('#Timer').hide();
+						$('#start').text(detik.toFixed(2) + ' Menit');
 					})
 
 				}, 1000);
