@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="row container mt-5 mx-auto px-1">
     	<div id="date" class="col-xl-12 mb-3"></div>
     	<div class="col-xl-4">
-    	<div class="shadow p1">
+    	<div class="shadow p-1 mb-3 rounded">
 			<?php 	
 
 					$nl1 = str_split($nilai);
