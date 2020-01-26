@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <body>
     
     <div class="row container mt-5 mx-auto px-1">
-    	<div id="date" class="col-xl-12"></div>
+    	<div id="date" class="col-xl-12 mb-3"></div>
     	<div class="col-xl-4">
     	<div>
 			<?php 	
@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<?php endif ?>
 					<?php endfor ?>
 				</tr>
-				<tr class="font-weight-bolder" style="line-height: 40px; height: 40px;">
+				<tr class="font-weight-bolder" style="line-height: 40px; height: 40px; border-bottom: 3px solid black">
 					<?php for ($i=0; $i<$ch; $i++): ?>
 						<?php if ($i>=$selisih): ?>
 							<td><?=$nl2[$i-$selisih]?></td>	
@@ -50,7 +50,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<?php endif ?>
 					<?php endfor ?>
 				</tr>
-				<tr><td colspan="<?= $ch ?>"></td></tr>
 						 
 				<?php 
 					
@@ -82,8 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					$line += 1;
 					}
 				?> 
-				<tr><td colspan="<?= $ch ?>"></td></tr>
-				<tr class="font-weight-bolder" style="line-height: 40px; height: 40px; font-size: 20px">
+				<tr class="font-weight-bolder" style="line-height: 40px; height: 40px; font-size: 20px; border-top: 3px solid black">
 					<?php foreach ($hsl as $v): ?>
 						<td><?=$v?></td>
 					<?php endforeach ?>
