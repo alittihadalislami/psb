@@ -63,6 +63,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		border: 1px solid #D0D0D0;
 		box-shadow: 0 0 8px #D0D0D0;
 	}
+
+	th, td {
+	  border: 1px solid grey;
+	  width: 20px;
+	  text-align: center;
+	}
+
+
+	table {
+	  border-collapse: collapse;
+	}
+
 	</style>
 </head>
 <body>
@@ -71,7 +83,79 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Welcome to CodeIgniter!</h1>
 
 	<div id="body">
-		<p>Percobaan Pertama menggunakan GIT :D </p>
+		<div>
+			<?php 	
+
+					$nl1 = str_split($nilai);
+					$nl2 = str_split($nilai2);
+					$hsl = str_split($hasil);
+					$c1 = count($nl1);
+					$c2 = count($nl2);
+					$ch = count($hsl);
+					$selisih = $ch-$c1;
+
+			?>
+			<table>
+				<tr>
+					<?php for ($i=0; $i<$ch; $i++): ?>
+						<?php if ($i>=$selisih): ?>
+							<td><?=$nl1[$i-$selisih]?></td>	
+						<?php endif ?>
+						<?php if ($i<$selisih): ?>
+							<td></td>	
+						<?php endif ?>
+					<?php endfor ?>
+				</tr>
+				<tr>
+					<?php for ($i=0; $i<$ch; $i++): ?>
+						<?php if ($i>=$selisih): ?>
+							<td><?=$nl2[$i-$selisih]?></td>	
+						<?php endif ?>
+						<?php if ($i<$selisih): ?>
+							<td></td>	
+						<?php endif ?>
+					<?php endfor ?>
+				</tr>
+				<tr><td colspan="<?= $ch ?>"></td></tr>
+						 
+				<?php 
+					
+					$line=0; 
+					foreach ($baris as $value) {					
+
+						$angka = str_split($value);
+						$jml_angka = count($angka);
+						$slsh= $ch - $jml_angka;
+
+						echo "<tr>";
+
+						for ($i=0; $i<$ch ; $i++) { 
+							$x = $slsh-$line;
+							if ($i>=$x) {
+								echo '<td style="font-size:10px; line-height: 10px">';
+									if (isset($angka[$i-$x]) ) {
+											echo $angka[$i-$x];
+									}else{
+										echo "";
+									}
+								echo '</td>';
+							}else{
+								echo '<td></td>';
+							}
+						}
+
+						echo "</tr>";
+					$line += 1;
+					}
+				?> 
+				<tr><td colspan="<?= $ch ?>"></td></tr>
+				<tr>
+					<?php foreach ($hsl as $v): ?>
+						<td style="font-weight: bolder;"><?=$v?></td>
+					<?php endforeach ?>
+				</tr>
+			</table>
+		</div>
 
 		<p>If you would like to edit this page you'll find it located at:</p>
 		<code>application/views/welcome_message.php</code>

@@ -37,20 +37,30 @@ class Welcome extends CI_Controller {
 		$nilai = rand($min,$max);
 		$nilai2 = rand($min,$max);
 
-		echo $nilai.'<br/>';
-		echo $nilai2.'<br/>';
+		$data['nilai'] =  $nilai;
+		$data['nilai2'] =  $nilai2;
 
-		echo '<hr>';
 
 		$y = str_split($nilai2);
 
-
+		$baris= 1;
 		foreach (array_reverse($y) as $pecah) {
 
-			echo $pecah*$nilai.'<br>';
+			if ( $pecah*$nilai == 0 ) {
+				$nol="0";
+				for ($i=0; $i<count(str_split($nilai)) ; $i++) { 
+					$nol = $nol."0";
+				}
+				$data['baris'][$baris++] = $nol;
+			}else{
+				$data['baris'][$baris++] = $pecah*$nilai;
+			}
 		}
-		echo '<hr>';
-		echo $nilai * $nilai2;
+
+		$data['hasil'] = $nilai * $nilai2;
+		$data['judul'] = "Latih hitung";
+
+		$this->load->view('welcome_message',$data);
 
 	}
 }
