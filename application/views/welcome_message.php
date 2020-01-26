@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </head>
   <body>
     
-    <div class="row container mt-5 mx-auto px-5">
+    <div class="row container mt-5 mx-auto px-1">
     	<div id="date" class="col-xl-12"></div>
     	<div class="col-xl-4">
     	<div>
