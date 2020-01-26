@@ -92,6 +92,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</tr>
 			</table>
 		</div>
+    	<div id="Timer" class="btn btn-block btn-success">Tendes</div>
     	</div>
     </div>
 
@@ -108,6 +109,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			var newDate = new Date();
 			newDate.setDate(newDate.getDate() );    
 			$('#date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+
+			var start = new Date;
+
+			setInterval(function() {
+				let detik = (new Date - start) / 1000 / 60 + " Menit";
+				$('#Timer').on('click', function(){
+					$('#Timer').text(detik);
+				})
+			}, 1000);
+			
+
     	})
     </script>
   </body>
