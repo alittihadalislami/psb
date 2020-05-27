@@ -3,9 +3,98 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Main_model','mm');
+	}
+
 	public function index()
 	{
 		$this->load->view('utama/landing');
+	}
+
+	function login()
+	{
+		$this->load->view('login/index');
+	}
+
+	function home()
+	{
+		$this->load->view('home', $data);
+	}
+
+	function listPropinsi()
+	{
+		$data = $this->db->get('i_propinsi')->result_array();
+		echo json_encode($data);
+	}
+
+	function listKabupaten()
+	{	$id = $this->input->post('id');
+		$data = $this->db->get_where('i_kabkot',['propinsi_id'=>$id])->result_array();
+		echo json_encode($data);
+	}
+
+	function listKecamatan()
+	{	$id = $this->input->post('id');
+		$data = $this->db->get_where('i_kecamatan',['kabkot_id'=>$id])->result_array();
+		echo json_encode($data);
+	}
+
+	function listDesa()
+	{	$id = $this->input->post('id');
+		$data = $this->db->get_where('i_desa',['kecamatan_id'=>$id])->result_array();
+		echo json_encode($data);
+	}
+
+	function cekData()
+	{
+		$daput = $this->input->post(null,'true');
+
+		$data_login = [
+			'nik' => $daput['nik'],
+			'nisn' => $daput['nisn']
+		];
+
+		if (count($daput) == 2 ) {
+			
+			$tersedia2 = $this->mm->cekData($daput);
+			
+			if (count($tersedia2) == 1) {
+				$this->session->set_userdata($data_login);
+				redirect('home','refresh');
+			} else{
+
+				$tersedia_nik = $this->mm->cekData(['nik'=>$daput['nik']]);
+				$tersedia_nisn = $this->mm->cekData(['nisn'=>$daput['nisn']]);
+
+				$tersedi_salah_satu = count($tersedia_nik) + count($tersedia_nisn);
+
+				if ($tersedi_salah_satu > 0 ) {
+					$this->session->set_flashdata('pesan', '<div class="col-md-12 mb-4 alert alert-danger">
+									        <div class="container">
+									          <div class="alert-icon">
+									            <i class="material-icons">error_outline</i>
+									          </div>
+									          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									            <span aria-hidden="true"><i class="material-icons">clear</i></span>
+									          </button>
+									          <b>Error Alert:</b> NIK atau NISN yang dimasukkan sudah terdaftar, silahkan login dengan Pasangan NIK yang NISN yang pernah didaftarkan sebelumnya...
+									        </div>
+									      </div>');
+					redirect('welcome/login','refresh');
+				}else{
+					$data['input'] = $daput;
+					$this->load->view('login/index2', $data);
+				}
+			}
+		}else{
+			$this->db->insert('p_data_awal', $daput);
+			$this->session->set_userdata($data_login);
+			redirect('home','refresh');
+		}
+
 	}
 
 	public function hitung()

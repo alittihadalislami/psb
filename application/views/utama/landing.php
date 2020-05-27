@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="<?=base_url()?>assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="<?=base_url()?>assets/img/favicon.png">
+  <link rel="icon" type="ico" href="<?=base_url()?>assets/img/favicon.ico">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    PPDB Ma'had Al Ittihad Al Islami
+    Penerimaan Santri Ma'had Al Ittihad Al Islami
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -55,11 +55,11 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#form">
-              <i class="material-icons">edit</i> Isi Formulir
+            <a class="nav-link" href="<?=base_url('welcome/login')?>">
+              <i class="material-icons">edit</i> Masuk
             </a>
           </li>
-          <li class="dropdown nav-item">
+          <!-- <li class="dropdown nav-item">
             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
               <i class="material-icons">apps</i> Components
             </a>
@@ -71,20 +71,20 @@
                 <i class="material-icons">content_paste</i> Documentation
               </a>
             </div>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="<?=base_url()?>assets/file/brosur_alittihad_2020-k.pdf" download="Brosur Ma'had Al Ittihad Al Islami">
               <i class="material-icons">cloud_download</i> Unduh Brosur
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank" data-original-title="email kami">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="mailto:alittihadalislami@gmail.com.com" target="_blank" data-original-title="email kami">
               <i class="fa fa-envelope"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" data-original-title="Follow us on Instagram">
-              <i class="fas fa-instagram"></i>
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/alittihadalislami" target="_blank" data-original-title="Follow us on Instagram">
+              <i class="fa fa-instagram"></i>
             </a>
           </li>
         </ul>
@@ -98,8 +98,12 @@
           <h2 class="title">Assalamulaikum..</h2>
           <h4>Laman Penerimaan Santri Baru PSB, adalah laman web yang dibuat untuk calon santriwan dan calon santriwati melakukan pendaftaran secara online.</h4>
           <br>
-          <a href="https://www.youtube.com/watch?v=v1uJhpAEphQ" target="_blank" class="btn btn-success btn-raised">
+          <a href="https://www.youtube.com/watch?v=v1uJhpAEphQ" target="_blank" class="btn btn-outline-success btn-raised">
           Kenali kami dengan melihat profil kami di &nbsp <i class="fa fa-youtube text-danger" style="font-size:20px"></i>  
+          </a>
+          <a href="<?= base_url('welcome/login') ?>" class="btn btn-success btn-raised mt-3">
+          Klik untuk Daftar  
+          &nbsp<i class="fa fa-arrow-right text-light"></i>  
           </a>
         </div>
       </div>
@@ -130,7 +134,7 @@
                 <div class="icon icon-success">
                   <i class="material-icons">verified_user</i>
                 </div>
-                <h4 class="info-title">Verified Users</h4>
+                <h4 class="info-title">SMP Al Ittihad</h4>
                 <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
               </div>
             </div>
@@ -139,146 +143,10 @@
                 <div class="icon icon-danger">
                   <i class="material-icons">fingerprint</i>
                 </div>
-                <h4 class="info-title">Fingerprint</h4>
+                <h4 class="info-title">MA Al Ittihad Al Islami</h4>
                 <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="section text-center">
-        <h2 class="title">Here is our team</h2>
-        <div class="team">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="team-player">
-                <div class="card card-plain">
-                  <div class="col-md-6 ml-auto mr-auto">
-                    <img src="<?=base_url()?>assets/img/faces/1.jpg" alt="Thumbnail Image" class=" rounded-circle img-fluid">
-                  </div>
-                  <h4 class="card-title">Gigi Hadid
-                    <br>
-                    <small class="card-description text-muted">Model</small>
-                  </h4>
-                  <div class="card-body">
-                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                  </div>
-                  <div class="card-footer justify-content-center">
-                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
-                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="team-player">
-                <div class="card card-plain">
-                  <div class="col-md-6 ml-auto mr-auto">
-                    <img src="<?=base_url()?>assets/img/faces/2.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
-                  </div>
-                  <h4 class="card-title">Christian Louboutin
-                    <br>
-                    <small class="card-description text-muted">Designer</small>
-                  </h4>
-                  <div class="card-body">
-                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                  </div>
-                  <div class="card-footer justify-content-center">
-                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="team-player">
-                <div class="card card-plain">
-                  <div class="col-md-6 ml-auto mr-auto">
-                    <img src="<?=base_url()?>assets/img/faces/4.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
-                  </div>
-                  <h4 class="card-title">Kendall Jenner
-                    <br>
-                    <small class="card-description text-muted">Model</small>
-                  </h4>
-                  <div class="card-body">
-                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                  </div>
-                  <div class="card-footer justify-content-center">
-                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
-                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section section-contacts px-3 mb-5" id="form">
-        <div class="row p-5" style="border: 1px solid green; width: fit-content;">
-          <div class="col-md ml-auto mr-auto">
-            <h2 class="text-center">Pendaftaran Santri</h2>
-            <h4 class="text-center description text-dark">Silahkan masukkan data-data calon santri pada kolom yang disediakan dibawah ini, sesuai dengan dokumen yang ada. seperti Kartu keluarga, Raport dan Ijazah jika sudah menerima ijazah terakhir</h4>
-            <form class="contact-form">
-              <div class="row">
-                <div class="col-md">
-                  <div class="form-group">
-                    <label for="nama" class="bmd-label-floating text-secondary">Nama Calon Santri</label>
-                    <input type="text" class="form-control text-capitalize" id="nama" name="nama"></input>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="bmd-label-floating">Nomor Induk Kependudukan (NIK)</label>
-                    <input type="number" class="form-control" name="nik">
-                    <span class="bmd-help">Sesuikan dengan Kartu Keluarga</span>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="nisn" class="bmd-label-floating">Nomor Induk Siswa Nasional (NISN)</label>
-                    <input type="number" class="form-control text-capitalize" id="nisn" name="nisn">
-                    <span class="bmd-help">Sesuikan dengan Raport / Ijasah</span>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="exampleMessage" class="bmd-label-floating">Alamat</label>
-                <textarea type="email" class="form-control text-capitalize" rows="4" id="exampleMessage"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">Example select</label>
-                <select class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect1">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" value="">
-                    Option one is this
-                    <span class="form-check-sign">
-                        <span class="check"></span>
-                    </span>
-                </label>
-            </div>
-              <div class="row">
-                <div class="col-md-4 ml-auto mr-auto text-center">
-                  <button class="btn btn-success btn-raised">
-                    Simpan Data
-                  </button>
-                </div>
-              </div>
-            </form>
           </div>
         </div>
       </div>

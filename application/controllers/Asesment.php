@@ -1,0 +1,158 @@
+<?php
+
+if (!defined('BASEPATH'))
+    exit('No direct script access allowed');
+
+class Asesment extends CI_Controller
+{
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Asesment_model');
+        $this->load->library('form_validation');
+    }
+
+    public function index()
+    {
+        $q = urldecode($this->input->get('q', TRUE));
+        $start = intval($this->input->get('start'));
+        
+        if ($q <> '') {
+            $config['base_url'] = base_url() . 'asesment/index.html?q=' . urlencode($q);
+            $config['first_url'] = base_url() . 'asesment/index.html?q=' . urlencode($q);
+        } else {
+            $config['base_url'] = base_url() . 'asesment/index.html';
+            $config['first_url'] = base_url() . 'asesment/index.html';
+        }
+
+        $config['per_page'] = 10;
+        $config['page_query_string'] = TRUE;
+        $config['total_rows'] = $this->Asesment_model->total_rows($q);
+        $asesment = $this->Asesment_model->get_limit_data($config['per_page'], $start, $q);
+
+        $this->load->library('pagination');
+        $this->pagination->initialize($config);
+
+        $data = array(
+            'asesment_data' => $asesment,
+            'q' => $q,
+            'pagination' => $this->pagination->create_links(),
+            'total_rows' => $config['total_rows'],
+            'start' => $start,
+        );
+        $this->load->view('asesment/t_pertanyaan_list', $data);
+    }
+
+    public function read($id) 
+    {
+        $row = $this->Asesment_model->get_by_id($id);
+        if ($row) {
+            $data = array(
+		'id_perty' => $row->id_perty,
+		'konten_perty' => $row->konten_perty,
+		'soal_id' => $row->soal_id,
+	    );
+            $this->load->view('asesment/t_pertanyaan_read', $data);
+        } else {
+            $this->session->set_flashdata('message', 'Record Not Found');
+            redirect(site_url('asesment'));
+        }
+    }
+
+    public function create() 
+    {
+        $data = array(
+            'button' => 'Create',
+            'action' => site_url('asesment/create_action'),
+	    'id_perty' => set_value('id_perty'),
+	    'konten_perty' => set_value('konten_perty'),
+	    'soal_id' => set_value('soal_id'),
+	);
+        $this->load->view('asesment/t_pertanyaan_form', $data);
+    }
+    
+    public function create_action() 
+    {
+        $this->_rules();
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->create();
+        } else {
+            $data = array(
+		'konten_perty' => $this->input->post('konten_perty',TRUE),
+		'soal_id' => $this->input->post('soal_id',TRUE),
+	    );
+
+            $this->Asesment_model->insert($data);
+            $this->session->set_flashdata('message', 'Create Record Success');
+            redirect(site_url('asesment'));
+        }
+    }
+    
+    public function update($id) 
+    {
+        $row = $this->Asesment_model->get_by_id($id);
+
+        if ($row) {
+            $data = array(
+                'button' => 'Update',
+                'action' => site_url('asesment/update_action'),
+		'id_perty' => set_value('id_perty', $row->id_perty),
+		'konten_perty' => set_value('konten_perty', $row->konten_perty),
+		'soal_id' => set_value('soal_id', $row->soal_id),
+	    );
+            $this->load->view('asesment/t_pertanyaan_form', $data);
+        } else {
+            $this->session->set_flashdata('message', 'Record Not Found');
+            redirect(site_url('asesment'));
+        }
+    }
+    
+    public function update_action() 
+    {
+        $this->_rules();
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->update($this->input->post('id_perty', TRUE));
+        } else {
+            $data = array(
+		'konten_perty' => $this->input->post('konten_perty',TRUE),
+		'soal_id' => $this->input->post('soal_id',TRUE),
+	    );
+
+            $this->Asesment_model->update($this->input->post('id_perty', TRUE), $data);
+            $this->session->set_flashdata('message', 'Update Record Success');
+            redirect(site_url('asesment'));
+        }
+    }
+    
+    public function delete($id) 
+    {
+        $row = $this->Asesment_model->get_by_id($id);
+
+        if ($row) {
+            $this->Asesment_model->delete($id);
+            $this->session->set_flashdata('message', 'Delete Record Success');
+            redirect(site_url('asesment'));
+        } else {
+            $this->session->set_flashdata('message', 'Record Not Found');
+            redirect(site_url('asesment'));
+        }
+    }
+
+    public function _rules() 
+    {
+	$this->form_validation->set_rules('konten_perty', 'konten perty', 'trim|required');
+	$this->form_validation->set_rules('soal_id', 'soal id', 'trim|required');
+
+	$this->form_validation->set_rules('id_perty', 'id_perty', 'trim');
+	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
+    }
+
+}
+
+/* End of file Asesment.php */
+/* Location: ./application/controllers/Asesment.php */
+/* Please DO NOT modify this information : */
+/* Generated by Harviacode Codeigniter CRUD Generator 2020-05-25 05:17:38 */
+/* http://harviacode.com */
