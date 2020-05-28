@@ -92,9 +92,9 @@ $(document).ready(function(){
 		simpanForm1();
 		simpanForm2();
 
-		$.when( simpanForm2() ).done(function() {
-		    location.reload();
-		});
+		// $.when( simpanForm2() ).done(function() {
+		//     // location.reload();
+		// });
 	});
 
 	tampilPertanyaan();
