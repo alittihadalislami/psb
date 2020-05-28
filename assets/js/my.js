@@ -91,8 +91,10 @@ $(document).ready(function(){
 	$('#simpanForm').on('click',function(){
 		simpanForm1();
 		simpanForm2();
-		location.reload();
 
+		$.when( simpanForm2() ).done(function() {
+		    location.reload();
+		});
 	});
 
 	tampilPertanyaan();

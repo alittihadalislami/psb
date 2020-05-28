@@ -19,7 +19,15 @@
   				<?php  
   					$ijasah = isset($data['ijasah']) ? base_url("uploads/").$data['ijasah'] : base_url('assets/img/no_image.svg') ;
   				?>
-  				<img class="img-thumbnail d-sm-block mx-auto" src="<?= $ijasah ?>" style="height: 100px;">
+  				
+  				<a href="<?= $ijasah ?>"  
+				   onclick="window.open('<?= $ijasah ?>', 
+				                         'newwindow', 
+				                         'width=500,height=700'); 
+				   return false;" >
+				 		<img class="img-thumbnail d-sm-block mx-auto" src="<?= $ijasah ?>" style="height: 100px;">
+				</a>
+				
   			</div>
 
 			<div class="col-md-8 m-2 m-sm-0">
