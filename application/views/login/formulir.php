@@ -12,9 +12,9 @@
 			<?php  
 			$p = 100-intval($proses) > 99 ? 100 : 100-intval($proses) ;
 			?>
-			<div class="progress" style="height: 20px;">
+			<a href="#" onclick="location.reload()"><div class="progress" style="height: 20px;">
 			  <div class="progress-bar bg-secondary" id="proses-bar" role="progressbar" style="width: <?= $p ?>%" aria-valuenow="<?= $p ?>" aria-valuemin="0" aria-valuemax="100"><?= $p ?>%</div>
-			</div>
+			</div></a>
 		</div>
 	</div>
   <div class="card-body rounded-0">
