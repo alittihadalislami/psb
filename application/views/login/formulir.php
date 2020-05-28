@@ -128,7 +128,7 @@
 	  		$status = ['Bapak Kandung', 'Ibu Kandung', 'Wali'];
 	  	?>
 	  		<label class="mt-5" for="nok">Nomor Kartu Keluarga dari calon santri</label>
-	  		<input type="number" id="nok" class="form-control" name="nok" value="<?= isset($tersedia['nok']) ? $tersedia['nok'] : '' ?>">
+	  		<input type="text" id="nok" class="form-control" name="nok" value="<?= isset($tersedia['nok']) ? $tersedia['nok'] : '' ?>">
 
 	  	<?php foreach ($status as $sts): ?>
 	  	<?php $no_status++ ?>

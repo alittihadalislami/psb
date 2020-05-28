@@ -97,6 +97,12 @@ $(document).ready(function(){
 		// });
 	});
 
+
+	$('#nok, #nik_ortu1').simpleMask({
+		'mask': '###### ###### ####'//, 
+		// 'nextInput': $('#frDtel') 
+	});
+
 	tampilPertanyaan();
 });
 
