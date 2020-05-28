@@ -97,7 +97,7 @@
                         <label for="alamat">Alamat Rumah</label>
                         <textarea class="form-control" id="alamat" rows="3"></textarea>
                       </div>
-                      <div class="form-group d-block">
+                      <div class="form-group d-none">
                         <input required type="text" class="form-control" placeholder="Alamat Pengenal" name="alamat_pengenal" id="alamat-simpan">
                         <input required type="text" class="form-control" placeholder="Id Desa" name="desa_id" id="desa-id">
                       </div>
