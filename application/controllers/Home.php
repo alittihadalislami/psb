@@ -182,13 +182,19 @@ class Home extends CI_Controller {
 		if ($ada > 0) {
 			$this->db->where('data_awal_id', $daput['data_awal_id']);
 			$this->db->update('p_pendaftaran', $daput);
+
+			$this->db->where('id_data_awal', $daput['data_awal_id']);
+			$this->db->update('p_data_awal', [ 'alamat_pengenal' => $daput['alamat_pengenal'] ] );
+
 			$data = 'update';
 		}else{
+
 			$this->db->insert('p_pendaftaran', $daput);
 			$data = 'insert';
 
 		}
-			echo json_encode($data);
+
+		echo json_encode($data);
 
 	}
 

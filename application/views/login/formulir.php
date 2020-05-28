@@ -156,11 +156,11 @@
 						</div>
 	    			<?php else: ?>
 					  	<div class="form-group mt-1">
-					  		<label for=""><?= $kolom['nama_kolom'].' '.$sts ?></label>
+					  		<label for="<?= $kolom['name_kolom'].$no_status ?>"><?= $kolom['nama_kolom'].' '.$sts ?></label>
 					    	<input 
 						    	class="form-control" 
 						    	type="<?= $kolom['type_input'] ?>" 
-						    	id="<?= $kolom['name_kolom'] ?>"  
+						    	id="<?= $kolom['name_kolom'].$no_status ?>"  
 						    	name="<?= $kolom['name_kolom'].$no_status ?>"
 						    	<?php
 						    		if ( count($tersedia_wali) > 0 ) {
