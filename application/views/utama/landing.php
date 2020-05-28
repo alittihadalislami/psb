@@ -78,12 +78,12 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="mailto:alittihadalislami@gmail.com.com" target="_blank" data-original-title="email kami">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="mailto:alittihadalislami@gmail.com.com" target="_blank" data-original-title="Email kami">
               <i class="fa fa-envelope"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/alittihadalislami" target="_blank" data-original-title="Follow us on Instagram">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/alittihadalislami" target="_blank" data-original-title="Instagram kami">
               <i class="fa fa-instagram"></i>
             </a>
           </li>
@@ -114,37 +114,42 @@
       <div class="section text-center">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto">
-            <h2 class="title">Program Unggulan</h2>
-            <h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn&apos;t scroll to get here. Add a button if you want the user to see more.</h5>
+            <h2 class="title">Ma'had Al Ittihad Al Islami</h2>
+            <!-- <h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn&apos;t scroll to get here. Add a button if you want the user to see more.</h5> -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 mx-auto mt-0">
+            <hr>
           </div>
         </div>
         <div class="features">
           <div class="row">
             <div class="col-md-4">
               <div class="info">
-                <div class="icon icon-success">
-                <i class="fas fa-quran"></i>
+                <div class="icon icon-book">
+                  <img class="img-fluid" style="width: 50px" src="<?=base_url('assets/img/quran.png') ?>">
                 </div>
-                <h4 class="info-title">Tahfidzul Qur'an</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                <h4 class="info-title">TAHFIDZUL QUR'AN</h4>
+                <p>Santri wajib menghafal Al Qur'an sebagai syarat kelulusan, dan bagi santri yang hal 30 juz akan mendapatkan sanad.</p>
               </div>
             </div>
             <div class="col-md-4">
               <div class="info">
-                <div class="icon icon-success">
-                  <i class="material-icons">verified_user</i>
+                <div class="icon icon-book">
+                  <img class="img-fluid" style="height: 50px" src="<?=base_url('assets/img/tour.png') ?>">
                 </div>
-                <h4 class="info-title">SMP Al Ittihad</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                <h4 class="info-title">TOUR DA'WAH</h4>
+                <p>Kegiatan untuk melatih santri berda'wah dan mengamalkan ilmunya, ditempatkan diberbagai wilayah di Indonesia.</p>
               </div>
             </div>
             <div class="col-md-4">
               <div class="info">
-                <div class="icon icon-danger">
-                  <i class="material-icons">fingerprint</i>
+                <div class="icon icon-book">
+                  <img class="img-fluid" style="width: 50px" src="<?=base_url('assets/img/akreditasi.jpg') ?>">
                 </div>
-                <h4 class="info-title">MA Al Ittihad Al Islami</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                <h4 class="info-title">AKREDIATASI A</h4>
+                <p>MA Al Ittihad Al Islami dan SMP Al Ittihad mendapatkan Akreditasi A dari Badan Akreditasi Nasional Sekolah/Madrasah (BAN S/M)</p>
               </div>
             </div>
           </div>
@@ -157,15 +162,9 @@
       <nav class="float-left">
         <ul>
           <li>
-            <a class="text-success" href="https://wa.me/6285655129098?text=Assalamulaikum%0Asaya%20Wali%20/%20Orang%20tua%20Ahmad%20asal%20Jeddah">
+            <a class="text-success" href="https://wa.me/6282332883743?text=Assalamulaikum">
               <i class="fa fa-whatsapp" aria-hidden="true"></i>
               Panitia PSB
-            </a>
-          </li>
-          <li>
-            <a class="text-success" href="https://wa.me/6285655129098?text=Assalamulaikum%0Asaya%20Wali%20/%20Orang%20tua%20Ahmad%20asal%20Jeddah">
-              <i class="fa fa-whatsapp" aria-hidden="true"></i>
-              Group Wali Calon Santri
             </a>
           </li>
         </ul>

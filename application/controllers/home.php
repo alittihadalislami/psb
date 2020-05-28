@@ -20,10 +20,10 @@ class Home extends CI_Controller {
 		$this->data ['navigasi'] = [
 			'Home' => [base_url('home/index'),'index'],
 			'Formulir' => [base_url('home/formulir'),'formulir'],
-			'Asesment' => [base_url('home/asesment'),'asesment'],
-			'Unggah File' => [base_url('home/unggahfile'),'unggahfile'],
-			'Resume' => [base_url('home/resume'),'resume'],
-			'Keuangan' => [base_url('home/keuangan'),'keuangan']
+			// 'Asesment' => [base_url('home/asesment'),'asesment'],
+			'Unggah File' => [base_url('home/unggahfile'),'unggahfile']
+			// 'Resume' => [base_url('home/resume'),'resume'],
+			// 'Keuangan' => [base_url('home/keuangan'),'keuangan']
 		];
 	}
 
@@ -42,7 +42,7 @@ class Home extends CI_Controller {
 		$this->load->view('login/login_home',$data);
 	}
 
-	public function unggahfile()
+	public function unggahFile()
 	{
 		$data = $this->data;
 		$data ['konten'] = $this->load->view('login/unggahfile', $data, TRUE);
@@ -52,9 +52,23 @@ class Home extends CI_Controller {
 	function simpanFile()
 	{
 
-        $config['upload_path']          = './uploads/';
-        $config['allowed_types']        = 'gif|jpg|png';
-        $config['max_size']             = 1024;
+		$file = $_FILES['arsip'];
+
+		$file_ext = pathinfo($_FILES["arsip"]["name"], PATHINFO_EXTENSION);
+
+		$nama = $this->input->post('nama');
+		$berkas = $this->input->post('berkas');
+		$id = $this->input->post('id_data_awal');
+
+		// var_dump($file_ext)
+
+        $config['upload_path']      = './uploads/';
+        $config['allowed_types']    = 'gif|jpg|png';
+        $config['max_size']         =  1024;
+        $config['max_size']         =  1024;
+        $config['overwrite']        =  TRUE;
+        $config['remove_spaces']    =  FALSE;
+        $config['file_name'] 		=  $nama.'-'.$berkas;
         // $config['max_width']            = 1024;
         // $config['max_height']           = 768;
 
@@ -64,13 +78,16 @@ class Home extends CI_Controller {
         {
                 $error = array('error' => $this->upload->display_errors());
 
-                $this->load->view('upload_form', $error);
+                redirect('home/unggahFile','refresh');
         }
         else
         {
-                $data = array('upload_data' => $this->upload->data());
+                $data ['upload_data'] = $this->upload->data();
 
-                $this->load->view('upload_success', $data);
+                $this->db->where('id_data_awal', $id);
+                $this->db->update('p_data_awal', [ $berkas =>$nama.'-'.$berkas.'.'.$file_ext]);
+
+                redirect('home/unggahFile','refresh');
         }
 
 
