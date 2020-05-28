@@ -6,7 +6,7 @@ function listPropinsi() {
 		'dataType': 'json',
 		success:function(response){
 				for (var i = 0; i < response.length; i++) {
-					propinsi += '<option value="'+response[i].id+'">'+response[i].name+'</option>';
+					propinsi += '<option value="'+response[i].kode+'">'+response[i].nama+'</option>';
 				}
 			$('#inputPropinsi').html(propinsi);
 		}
@@ -62,7 +62,7 @@ function listKabupaten(){
 		'data':{id:propinsi},
 		success:function(response){
 				for (var i = 0; i < response.length; i++) {
-					kabupaten += '<option value="'+response[i].id+'">'+response[i].name+'</option>';
+					kabupaten += '<option value="'+response[i].kode+'">'+response[i].nama+'</option>';
 				}
 			$('#inputKabupaten').html(kabupaten);
 		}
@@ -81,7 +81,7 @@ function listKecamatan(){
 		'data':{id:kabupaten},
 		success:function(response){
 				for (var i = 0; i < response.length; i++) {
-					kecamatan += '<option value="'+response[i].id+'">'+response[i].name+'</option>';
+					kecamatan += '<option value="'+response[i].kode+'">'+response[i].nama+'</option>';
 				}
 			$('#inputKecamatan').html(kecamatan);
 		}
@@ -100,7 +100,7 @@ function listDesa(){
 		'data':{id:kecamatan},
 		success:function(response){
 				for (var i = 0; i < response.length; i++) {
-					desa += '<option value="'+response[i].id+'">'+response[i].name+'</option>';
+					desa += '<option value="'+response[i].kode+'">'+response[i].nama+'</option>';
 				}
 			$('#inputDesa').html(desa);
 		}

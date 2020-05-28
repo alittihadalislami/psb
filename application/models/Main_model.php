@@ -33,7 +33,33 @@ class Main_model extends CI_Model {
 				ON k.`id` = d.`kecamatan_id` JOIN i_kabkot b
 				ON k.`kabkot_id` = b.`id` JOIN i_propinsi v
 				ON v.`id` = b.`propinsi_id` WHERE a.`id_data_awal` = $id ";
-		return $this->db->query($stringQ)->row_array();
+		$hasil =  $this->db->query($stringQ)->row_array();
+		
+		if ($hasil != NULL){
+			
+			return $hasil;
+
+		}else{
+			$this->db->select('desa_id');
+			$desa = $this->db->get_where('p_data_awal', ['id_data_awal' => $id])->row_array();
+			
+			$tingkat = [
+				13 => 'ds',
+				8 => 'kec',
+				5 => 'kab',
+				2 => 'prop',
+			];
+			
+			foreach ($tingkat as $tk => $val) {
+				$kode = substr($desa['desa_id'], 0, $tk);
+
+				$this->db->select('nama');
+				$data = $this->db->get_where('wilayah_2020', ['kode'=>$kode])->row_array();
+				$hasil [$val] = $data['nama'] ;
+			}
+
+			return $hasil;
+		}
 	}
 
 	function selectTerpilih($baris,$id)

@@ -26,25 +26,39 @@ class Welcome extends CI_Controller {
 
 	function listPropinsi()
 	{
-		$data = $this->db->get('i_propinsi')->result_array();
+		$this->db->where('char_length(kode)', 2);
+		$data = $this->db->get('wilayah_2020')->result_array();
+		
 		echo json_encode($data);
 	}
 
 	function listKabupaten()
-	{	$id = $this->input->post('id');
-		$data = $this->db->get_where('i_kabkot',['propinsi_id'=>$id])->result_array();
+	{	$id = $this->input->post('id',true);
+
+		$this->db->where('char_length(kode)', 5);
+		$this->db->like('kode', $id, 'after');
+		$data = $this->db->get('wilayah_2020')->result_array();
+		
 		echo json_encode($data);
 	}
 
 	function listKecamatan()
-	{	$id = $this->input->post('id');
-		$data = $this->db->get_where('i_kecamatan',['kabkot_id'=>$id])->result_array();
+	{	$id = $this->input->post('id',true);
+
+		$this->db->where('char_length(kode)', 8);
+		$this->db->like('kode', $id, 'after');
+		$data = $this->db->get('wilayah_2020')->result_array();
+
 		echo json_encode($data);
 	}
 
 	function listDesa()
-	{	$id = $this->input->post('id');
-		$data = $this->db->get_where('i_desa',['kecamatan_id'=>$id])->result_array();
+	{	$id = $this->input->post('id',true);
+
+		$this->db->where('char_length(kode)', 13);
+		$this->db->like('kode', $id, 'after');
+		$data = $this->db->get('wilayah_2020')->result_array();
+
 		echo json_encode($data);
 	}
 
