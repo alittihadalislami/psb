@@ -68,7 +68,7 @@ class Home extends CI_Controller {
         $config['max_size']         =  1024;
         $config['overwrite']        =  TRUE;
         $config['remove_spaces']    =  FALSE;
-        $config['file_name'] 		=  $nama.'-'.$berkas;
+        $config['file_name'] 		=  $id.'-'.$nama.'-'.$berkas;
         // $config['max_width']            = 1024;
         // $config['max_height']           = 768;
 
@@ -77,7 +77,7 @@ class Home extends CI_Controller {
         if ( ! $this->upload->do_upload('arsip'))
         {
                 $error =  $this->upload->display_errors();
-                // var_dump(substr($error,7,8));
+
                 $detail_error = substr($error,7,8) == 'filetype' ? '<strong>File yang diupload harus Gambar (JPG/JPEG/PNG) atau periksa ukurannya..</strong>' : $error ;
 
                 $pesan = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
