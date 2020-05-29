@@ -31,29 +31,31 @@
         <?= $this->session->userdata('pesan'); ?>
         <div class="col-lg-4 col-md-6 ml-auto mr-auto">
           <div class="card card-login">
-            <form class="form" method="post" action="<?= base_url('welcome/cekData') ?>">
-              <div class="card-header card-header-success text-center">
-                <h4 class="card-title">Masuk / Daftar</h4>
-                <p>Silahkan masukkan data diri calon santri..</p>
+            <form class="form" method="post" action="<?= base_url('welcome/login') ?>">
+              <div class="card-header card-header-success text-center py-0 pb-2">
+                <h4 class="card-title pt-2 mb-0">Masuk / Daftar</h4>
+                <p class="py-0 my-0">Silahkan masukkan data diri calon santri..</p>
               </div>
               <div class="card-body">
-
+                <span class="text-center text-danger font-weight-bold" style=""><?= form_error('nik'); ?></span>
+                <span class="text-center text-danger font-weight-bold" style=""><?= form_error('nisn'); ?></span>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
                       <i class="material-icons">mail</i>
                     </span>
                   </div>
-                  <input type="number" class="form-control" placeholder="NIK Calon Santri" required name=" nik">
+                  <input type="number" class="form-control" placeholder="NIK Calon Santri" required name=" nik" value="<?php echo set_value('nik'); ?>">
                   <span class="bmd-help" style="margin-top: 40px;margin-left: 55px;">Mohon disesuaikan dengan Kartu Keluarga.</span>
                 </div>
+
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
                       <i class="material-icons">lock_outline</i>
                     </span>
                   </div>
-                  <input type="number" class="form-control" placeholder="NISN Calon Santri" name="nisn" required>
+                  <input type="number" class="form-control" placeholder="NISN Calon Santri" name="nisn" required value="<?php echo set_value('nisn'); ?>">
                   <span class="bmd-help" style="margin-top: 40px;margin-left: 55px;">Mohon disesuaikan NISN dari Sekolah Terakhir.</span>
                 </div>
                 

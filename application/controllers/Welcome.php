@@ -7,6 +7,27 @@ class Welcome extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Main_model','mm');
+		$this->load->library('form_validation');
+
+		$this->form_validation->set_rules(
+			'nik', 
+			'NIK Calon Santri', 
+			'trim|required|min_length[16]|max_length[16]',
+			[
+				'min_length'=> '{field} harus 16 digit',
+				'max_length'=> '{field} harus 16 digit'
+			]
+		);
+
+		$this->form_validation->set_rules(
+			'nisn', 
+			'NISN Calon Santri', 
+			'trim|required|min_length[10]|max_length[10]',
+			[
+				'min_length'=> '{field} harus 10 digit',
+				'max_length'=> '{field} harus 10 digit'
+			]
+		);
 	}
 
 	public function index()
@@ -16,7 +37,11 @@ class Welcome extends CI_Controller {
 
 	function login()
 	{
-		$this->load->view('login/index');
+		if ($this->form_validation->run() == FALSE) {
+			$this->load->view('login/index');
+		} else {
+			$this->cekData();
+		}
 	}
 
 	function home()
@@ -99,6 +124,7 @@ class Welcome extends CI_Controller {
 									      </div>');
 					redirect('welcome/login','refresh');
 				}else{
+
 					$data['input'] = $daput;
 					$this->load->view('login/index2', $data);
 				}
