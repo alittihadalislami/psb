@@ -7,10 +7,10 @@
   		
   		<?= $this->session->flashdata('pesan'); ?>
 
-  		<div class="info small font-weight-bold">
+  		<div class="info small font-weight-bold col-md-8 mb-5">
 	  		<p>Sangat disarankan untuk <span style="font-style: italic;">menscan</span> file yang akan diupload dengan parangkat scanner yang baik, agar file bisa dibaca dengan baik.. </p>
-	  		<p>File yang bisa diupload type <strong class="text-success">gambar .png, .jpg dan berukuran maksimal 1MB</strong></p>
-	  		<p>Jika file terlalu besar, silahkan ubah ukuran filenya. bisa menggunakan aplikasi online seperti : <a href="https://compressjpeg.com" target="_blank">compressjpeg.com</a>, <a href="https://tinyjpg.com" target="_blank">tinyjpg.com</a>, atau yang lainnya.. </p>
+	  		<p>File yang bisa diupload type <strong class="text-success">gambar .png, .jpg dan berukuran maksimal 1 MB </strong> dan silahkan klik gambar setelah berhasil upload untuk memastikan <strong class="text-success">bisa dibaca dengan baik </strong></p>
+	  		<p>Jika ukuran file lebih besar dari 1 MB, silahkan ubah ukuran filenya. bisa menggunakan aplikasi online seperti : <a href="https://compressjpeg.com" target="_blank">compressjpeg.com</a>, <a href="https://tinyjpg.com" target="_blank">tinyjpg.com</a>, atau yang lainnya.. </p>
   		</div>
 
 
