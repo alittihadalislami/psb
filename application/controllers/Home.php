@@ -105,7 +105,7 @@ class Home extends CI_Controller {
                 }
 
                 $this->db->where('id_data_awal', $id);
-                $this->db->update('p_data_awal', [ $berkas =>$nama.'-'.$berkas.'.'.$file_ext]);
+                $this->db->update('p_data_awal', [ $berkas =>$id.'-'.$nama.'-'.$berkas.'.'.$file_ext]);
 
                 $this->session->set_flashdata('pesan', $pesan);
 
