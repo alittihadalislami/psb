@@ -29,7 +29,7 @@
 				                         'newwindow', 
 				                         'width=500,height=700'); 
 				   return false;" >
-				 		<img class="img-thumbnail d-sm-block mx-auto" src="<?= $ijasah ?>" style="height: 100px;">
+				 	<img class="img-thumbnail d-sm-block mx-auto" src="<?= $ijasah ?>" style="height: 100px;">
 				</a>
 				
   			</div>
@@ -61,7 +61,13 @@
   				<?php  
   					$skhu = isset($data['skhu']) ? base_url("uploads/").$data['skhu'] : base_url('assets/img/no_image.svg') ;
   				?>
-  				<img class="img-thumbnail d-sm-block mx-auto" src="<?= $skhu ?>" style="height: 100px;">
+  				<a href="<?= $skhu ?>"  
+				   onclick="window.open('<?= $skhu ?>', 
+				                         'newwindow', 
+				                         'width=500,height=700'); 
+				   	return false;" >
+  					<img class="img-thumbnail d-sm-block mx-auto" src="<?= $skhu ?>" style="height: 100px;">
+  				</a>
   			</div>
 
 			<div class="col-md-8 m-2 m-sm-0">
@@ -91,7 +97,13 @@
   				<?php  
   					$kk = isset($data['kk']) ? base_url("uploads/").$data['kk'] : base_url('assets/img/no_image.svg') ;
   				?>
-  				<img class="img-thumbnail d-sm-block mx-auto" src="<?= $kk ?>" style="height: 100px;">
+  				<a href="<?= $kk ?>"  
+				   	onclick="window.open('<?= $kk ?>', 
+				                         'newwindow', 
+				                         'width=500,height=700'); 
+				   	return false;" >
+  					<img class="img-thumbnail d-sm-block mx-auto" src="<?= $kk ?>" style="height: 100px;">
+  				</a>
   			</div>
 
 			<div class="col-md-8 m-2 m-sm-0">
@@ -121,7 +133,13 @@
   				<?php  
   					$akte = isset($data['akte']) ? base_url("uploads/").$data['akte'] : base_url('assets/img/no_image.svg') ;
   				?>
-  				<img class="img-thumbnail d-sm-block mx-auto" src="<?= $akte ?>" style="height: 100px;">
+  				<a href="<?= $akte ?>"  
+				   onclick="window.open('<?= $akte ?>', 
+				                         'newwindow', 
+				                         'width=500,height=700'); 
+				   	return false;" >
+  					<img class="img-thumbnail d-sm-block mx-auto" src="<?= $akte ?>" style="height: 100px;">
+  				</a>
   			</div>
 
 			<div class="col-md-8 m-2 m-sm-0">
@@ -151,7 +169,13 @@
   				<?php  
   					$kartu = isset($data['kartu']) ? base_url("uploads/").$data['kartu'] : base_url('assets/img/no_image.svg') ;
   				?>
-  				<img class="img-thumbnail d-sm-block mx-auto" src="<?= $kartu ?>" style="height: 100px;">
+  				<a href="<?= $kartu ?>"  
+				   onclick="window.open('<?= $kartu ?>', 
+				                         'newwindow', 
+				                         'width=500,height=700'); 
+				   	return false;" >
+  					<img class="img-thumbnail d-sm-block mx-auto" src="<?= $kartu ?>" style="height: 100px;">
+  				</a>
   			</div>
 
 			<div class="col-md-8 m-2 m-sm-0">
