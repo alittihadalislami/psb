@@ -4,11 +4,15 @@
 		<h5>Ma'had Al Ittihad - 2020</h5>
 	</div>
   	<div class="card-body rounded-0">
+  		
+  		<?= $this->session->flashdata('pesan'); ?>
+
   		<div class="info small font-weight-bold">
 	  		<p>Sangat disarankan untuk <span style="font-style: italic;">menscan</span> file yang akan diupload dengan parangkat scanner dengan baik agar file bisa dibaca dengan baik.. </p>
 	  		<p>File yang bisa diupload type <strong class="text-success">gambar .png, .jpg dan berukuran maksimal 1MB</strong></p>
 	  		<p>Jika file terlalu besar, silahkan ubah ukuran filenya. bisa menggunakan aplikasi online seperti : <a href="https://compressjpeg.com" target="_blank">compressjpeg.com</a>, <a href="https://tinyjpg.com" target="_blank">tinyjpg.com</a>, atau yang lainnya.. </p>
   		</div>
+
 
   		<div class="row">
   			<div class="col-md-12">

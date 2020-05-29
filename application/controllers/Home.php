@@ -18,10 +18,10 @@ class Home extends CI_Controller {
 		$this->data['data'] = $this->mm->cekData(['nik'=>$this->session->userdata('nik')])[0];
 
 		$this->data ['navigasi'] = [
-			'Home' => [base_url('home/index'),'index'],
-			'Formulir' => [base_url('home/formulir'),'formulir'],
+			'<i class="fi-xnsuxl-home-solid"></i> &nbsp Home' => [base_url('home/index'),'index'],
+			'<i class="fi-stsuxl-ordered-list-thin"></i> &nbsp Formulir' => [base_url('home/formulir'),'formulir'],
 			// 'Asesment' => [base_url('home/asesment'),'asesment'],
-			'Unggah File' => [base_url('home/unggahfile'),'unggahfile']
+			'<i class="fi-snsuxl-upload-solid"></i> &nbsp Unggah File' => [base_url('home/unggahFile'),'unggahFile']
 			// 'Resume' => [base_url('home/resume'),'resume'],
 			// 'Keuangan' => [base_url('home/keuangan'),'keuangan']
 		];
@@ -63,7 +63,7 @@ class Home extends CI_Controller {
 		// var_dump($file_ext)
 
         $config['upload_path']      = './uploads/';
-        $config['allowed_types']    = 'gif|jpg|png';
+        $config['allowed_types']    = 'gif|jpg|png|jpeg';
         $config['max_size']         =  1024;
         $config['max_size']         =  1024;
         $config['overwrite']        =  TRUE;
@@ -76,16 +76,38 @@ class Home extends CI_Controller {
 
         if ( ! $this->upload->do_upload('arsip'))
         {
-                $error = array('error' => $this->upload->display_errors());
+                $error =  $this->upload->display_errors();
+                // var_dump(substr($error,7,8));
+                $detail_error = substr($error,7,8) == 'filetype' ? '<strong>File yang diupload harus Gambar (JPG/JPEG/PNG) atau periksa ukurannya..</strong>' : $error ;
+
+                $pesan = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                		File '.$berkas.' gagal diupload <br> '.$detail_error.'
+					  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					    <span aria-hidden="true">&times;</span>
+					  </button>
+					</div>';
+
+                $this->session->set_flashdata('pesan', $pesan);
 
                 redirect('home/unggahFile','refresh');
         }
         else
         {
-                $data ['upload_data'] = $this->upload->data();
+                $upload_data= $this->upload->data();
+
+                if ($upload_data['is_image']) {
+                	$pesan = '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                		File '.$berkas.' berhasil diupload
+					  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					    <span aria-hidden="true">&times;</span>
+					  </button>
+					</div>';
+                }
 
                 $this->db->where('id_data_awal', $id);
                 $this->db->update('p_data_awal', [ $berkas =>$nama.'-'.$berkas.'.'.$file_ext]);
+
+                $this->session->set_flashdata('pesan', $pesan);
 
                 redirect('home/unggahFile','refresh');
         }

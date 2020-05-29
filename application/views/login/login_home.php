@@ -66,7 +66,7 @@
 								}
 							?>
 					  		<a href="<?= $gasi[0] ?>" class="list-group-item list-group-item-action navigasi <?= $active ?>">
-					    	<?= $navi?>
+					    	<?= $navi?>  
 					  		</a>
 						<?php endforeach ?>
 					</div>
