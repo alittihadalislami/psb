@@ -63,7 +63,7 @@
 						    	type="<?= $kolom['type_input'] ?>" 
 						    	id="<?= $kolom['name_kolom'] ?>" 
 						    	<?php if ($kolom['name_kolom'] == 'tgl_lahir'): ?>
-						    		data-toggle="datepicker" 	
+						    		data-toggle="datepicker" readonly style="background-color: white" 	
 						    	<?php endif ?>  
 						    	name="<?= $kolom['name_kolom'] ?>"
 						    	<?php
@@ -113,7 +113,7 @@
 					    	name="<?= $kolom['name_kolom'] ?>"
 					    	value="<?= isset($tersedia[$kolom['name_kolom']]) ? $tersedia[$kolom['name_kolom']] : '' ?>"
 					    	<?php if ($kolom['name_kolom'] == 'tgl_lahir_seijasah'): ?>
-						    	data-toggle="datepicker" 	
+						    	data-toggle="datepicker" readonly style="background-color: white"	
 						    <?php endif ?>
 				    	>
 				  	</div>
@@ -169,7 +169,7 @@
 						    	?>
 						    	value="<?= isset($nilai) ? $nilai : null ?>"
 						    	<?php if ($kolom['name_kolom'] == 'tgl_lahir_ortu'): ?>
-							    	data-toggle="datepicker" 	
+							    	data-toggle="datepicker" readonly style="background-color: white"
 							    <?php endif ?>
 					    	>
 					  	</div>
