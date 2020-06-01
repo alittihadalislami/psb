@@ -20,10 +20,10 @@ class Home extends CI_Controller {
 		$this->data ['navigasi'] = [
 			'<i class="fi-xnsuxl-home-solid"></i> &nbsp Home' => [base_url('home/index'),'index'],
 			'<i class="fi-stsuxl-ordered-list-thin"></i> &nbsp Formulir' => [base_url('home/formulir'),'formulir'],
-			// 'Asesment' => [base_url('home/asesment'),'asesment'],
-			'<i class="fi-snsuxl-upload-solid"></i> &nbsp Unggah File' => [base_url('home/unggahFile'),'unggahFile']
-			// 'Resume' => [base_url('home/resume'),'resume'],
-			// 'Keuangan' => [base_url('home/keuangan'),'keuangan']
+			'<i class="fi-xnsuxl-left-align-solid"></i> &nbsp Asesment' => [base_url('home/asesment'),'asesment'],
+			'<i class="fi-snsuxl-upload-solid"></i> &nbsp Unggah File' => [base_url('home/unggahFile'),'unggahFile'],
+			'<i class="fi-xnsuxl-credit-card-solid"></i> &nbsp Keuangan' => [base_url('home/keuangan'),'keuangan'],
+			'<i class="fi-swsuxl-check"></i> &nbsp Resume' => [base_url('home/resume'),'resume']
 		];
 	}
 
@@ -113,6 +113,86 @@ class Home extends CI_Controller {
         }
 
 
+	}
+
+	public function keuangan()
+	{
+
+		$this->load->library('form_validation');
+
+		$this->form_validation->set_rules(
+			'nama', 
+			'Nama Calon santri', 
+			'required',
+			[
+				'required'=> '{field} Harus terisi'
+			]
+		);
+
+		$data = $this->data;
+		$data ['konten'] = $this->load->view('login/keuangan', $data, TRUE);
+
+		if ($this->form_validation->run() == FALSE) {
+
+			$this->load->view('login/login_home',$data);
+
+		} else {
+
+			$nama = $this->input->post('nama');
+			$berkas = $this->input->post('berkas');
+			$id = $this->input->post('id_data_awal');
+
+			$config['upload_path']      = './uploads/transfer';
+	        $config['allowed_types']    = 'gif|jpg|png|jpeg';
+	        $config['max_size']         =  2048;
+	        $config['overwrite']        =  TRUE;
+	        $config['remove_spaces']    =  FALSE;
+	        $config['file_name'] 		=  $id.'-'.$nama.'-'.$berkas;
+	        
+	        $this->load->library('upload', $config);
+	        
+	        if ( ! $this->upload->do_upload('bukti-bayar')){
+	        	
+	        	$error =  $this->upload->display_errors();
+
+                $detail_error = substr($error,7,8) == 'filetype' ? '<strong>File yang diupload harus Gambar (JPG/JPEG/PNG) atau periksa ukurannya..</strong>' : $error ;
+
+                $pesan = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                		File '.$berkas.' gagal diupload <br> '.$detail_error.'
+					  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					    <span aria-hidden="true">&times;</span>
+					  </button>
+					</div>';
+
+                $this->session->set_flashdata('pesan', $pesan);
+
+	        	// $this->load->view('login/login_home',$data);
+	        	redirect('home/keuangan','refresh');
+	        }
+	        else{
+
+	        	$upload_data= $this->upload->data();
+
+
+            	$pesan = '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            		File '.$berkas.' berhasil diupload
+				  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				    <span aria-hidden="true">&times;</span>
+				  </button>
+				</div>';
+
+				$orig_name = $upload_data["orig_name"];
+
+	        	$this->db->where('id_data_awal', $id);
+                $this->db->update('p_data_awal', [ 'keuangan' =>$orig_name]);
+
+                $this->session->set_flashdata('pesan', $pesan);
+
+	        	$this->load->view('login/login_home',$data);
+
+	        	redirect('home/keuangan','refresh');
+	        }
+		}
 	}
 
 	public function formulir()

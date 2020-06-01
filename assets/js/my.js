@@ -137,5 +137,10 @@ $('#simpan-asesment').on('click', function(){
 	tampilPertanyaan(id);
 });
 
+// $('.btn-danger').on("click",function(){
+//     alert('x');
+//     // e.preventDefault();
+// });
+
 
 
