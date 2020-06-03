@@ -86,6 +86,22 @@ $('.nav-link').on('click',function(){
 	
 });
 
+var ClipboardHelper = {
+
+    copyElement: function ($element)
+    {
+       this.copyText($element.text())
+    },
+    copyText:function(text) // Linebreaks with \n
+    {
+        var $tempInput =  $("<textarea>");
+        $("body").append($tempInput);
+        $tempInput.val(text).select();
+        document.execCommand("copy");
+        $tempInput.remove();
+    }
+};
+
 $(document).ready(function(){
 	
 	$('#simpanForm').on('click',function(){
@@ -104,7 +120,14 @@ $(document).ready(function(){
 	});
 
 	tampilPertanyaan();
+
+	$('.copy').on('click',function(){
+		x = $(this).data('nilai');
+		ClipboardHelper.copyText(x);
+	})
 });
+
+
 
 function tampilPertanyaan(param = 1){
 	pilihan_ganda = ''
@@ -137,10 +160,7 @@ $('#simpan-asesment').on('click', function(){
 	tampilPertanyaan(id);
 });
 
-// $('.btn-danger').on("click",function(){
-//     alert('x');
-//     // e.preventDefault();
-// });
+
 
 
 
