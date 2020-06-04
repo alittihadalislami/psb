@@ -20,10 +20,10 @@ class Home extends CI_Controller {
 		$this->data ['navigasi'] = [
 			'<i class="fi-xnsuxl-home-solid"></i> &nbsp Home' => [base_url('home/index'),'index'],
 			'<i class="fi-stsuxl-ordered-list-thin"></i> &nbsp Formulir' => [base_url('home/formulir'),'formulir'],
-			'<i class="fi-xnsuxl-left-align-solid"></i> &nbsp Asesment' => [base_url('home/asesment'),'asesment'],
+			// '<i class="fi-xnsuxl-left-align-solid"></i> &nbsp Asesment' => [base_url('home/asesment'),'asesment'],
 			'<i class="fi-snsuxl-upload-solid"></i> &nbsp Unggah File' => [base_url('home/unggahFile'),'unggahFile'],
 			'<i class="fi-xnsuxl-credit-card-solid"></i> &nbsp Keuangan' => [base_url('home/keuangan'),'keuangan'],
-			'<i class="fi-swsuxl-check"></i> &nbsp Resume' => [base_url('home/resume'),'resume']
+			// '<i class="fi-swsuxl-check"></i> &nbsp Resume' => [base_url('home/resume'),'resume']
 		];
 	}
 
@@ -139,7 +139,6 @@ class Home extends CI_Controller {
 		} else {
 
 			$nama = $this->input->post('nama');
-			$berkas = $this->input->post('berkas');
 			$id = $this->input->post('id_data_awal');
 
 			$config['upload_path']      = './uploads/transfer';
@@ -147,7 +146,7 @@ class Home extends CI_Controller {
 	        $config['max_size']         =  2048;
 	        $config['overwrite']        =  TRUE;
 	        $config['remove_spaces']    =  FALSE;
-	        $config['file_name'] 		=  $id.'-'.$nama.'-'.$berkas;
+	        $config['file_name'] 		=  $id.'-'.$nama.'-bt';
 	        
 	        $this->load->library('upload', $config);
 	        
@@ -158,7 +157,7 @@ class Home extends CI_Controller {
                 $detail_error = substr($error,7,8) == 'filetype' ? '<strong>File yang diupload harus Gambar (JPG/JPEG/PNG) atau periksa ukurannya..</strong>' : $error ;
 
                 $pesan = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                		File '.$berkas.' gagal diupload <br> '.$detail_error.'
+                		File <strong>Bukti Transfer</strong> gagal diupload <br> '.$detail_error.'
 					  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					    <span aria-hidden="true">&times;</span>
 					  </button>
@@ -166,7 +165,6 @@ class Home extends CI_Controller {
 
                 $this->session->set_flashdata('pesan', $pesan);
 
-	        	// $this->load->view('login/login_home',$data);
 	        	redirect('home/keuangan','refresh');
 	        }
 	        else{
@@ -175,7 +173,7 @@ class Home extends CI_Controller {
 
 
             	$pesan = '<div class="alert alert-success alert-dismissible fade show" role="alert">
-            		File '.$berkas.' berhasil diupload
+            		File <strong>Bukti Transfer</strong> berhasil diupload
 				  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 				    <span aria-hidden="true">&times;</span>
 				  </button>
@@ -186,9 +184,10 @@ class Home extends CI_Controller {
 	        	$this->db->where('id_data_awal', $id);
                 $this->db->update('p_data_awal', [ 'keuangan' =>$orig_name]);
 
+	        	// $pesan = '<script type="text/javascript"> pesan();</script>' ;
+
                 $this->session->set_flashdata('pesan', $pesan);
 
-	        	$this->load->view('login/login_home',$data);
 
 	        	redirect('home/keuangan','refresh');
 	        }
@@ -387,6 +386,13 @@ class Home extends CI_Controller {
 		$data = [$pertanyaan,$list_pilihan];
 
 		echo json_encode($data);
+	}
+
+	public function resume()
+	{
+		$data = $this->data;
+		$data ['konten'] = $this->load->view('login/resume', $data, TRUE);
+		$this->load->view('login/login_home',$data);
 	}
 
 }

@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="<?= base_url('assets/img/favicon.ico') ?>" type="ico" sizes="16x16">
-	<!-- bootsrap	 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<!-- friconix -->
 	<script defer src="https://friconix.com/cdn/friconix.js"> </script>
+	<!-- sweatalert -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	<!-- bootsrap	 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<!-- my.css -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/my.css') ?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/datepicker.css') ?>">

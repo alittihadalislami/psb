@@ -128,6 +128,14 @@ $(document).ready(function(){
 });
 
 
+function pesan(title='Success',text='berhasil',icon='success') {
+	Swal.fire({
+	  title: title,
+	  text: text,
+	  icon: icon,
+	  confirmButtonText: 'Siap'
+	})
+}
 
 function tampilPertanyaan(param = 1){
 	pilihan_ganda = ''

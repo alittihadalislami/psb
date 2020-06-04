@@ -1,6 +1,6 @@
 <div class="card mt-5 rounded-0">
 	<div class="card-header text-success">
-		<h5 class="h4">Unggah File Pendukung</h5>
+		<h5 class="h4">Unggah File Pembiayaan</h5>
 		<h5>Ma'had Al Ittihad - 2020</h5>
 	</div>
   	<div class="card-body rounded-0">
@@ -66,15 +66,13 @@
   			</div>
 
   			<?php  
-  				//jika sudah verifikasi dilock
-  				
-  				$transfer = isset($data['keuangan']) ? base_url('uploads/transfer/').$data['keuangan'] : null;
+  				$upload_resi = base_url('uploads/transfer/').$data['keuangan'];
 
-  				// $transfer = null;
+  				$verifikasi = $data['verf_keuangan'] != NULL ? $upload_resi : NULL ;
 
-  				$display = $transfer == null ? 'd-none' : 'd-block';
-  				$read = $transfer == null ? '' : 'readonly';
-  				$disable = $transfer == null ? '' : 'disabled';
+  				$display = $data['keuangan'] == null ? 'd-none' : 'd-block';
+  				$read = $verifikasi == null ? '' : 'readonly';
+  				$disable = $verifikasi == null ? '' : 'disabled';
   			?>
 
 
@@ -94,12 +92,12 @@
 					</div>
 
 		  			<div class="<?= $display ?>">
-		  				<a href="<?= $transfer ?>"  
-						   onclick="window.open('<?= $transfer ?>', 
+		  				<a href="<?= $upload_resi ?>"  
+						   onclick="window.open('<?= $upload_resi ?>', 
 						                         'newwindow', 
 						                         'width=500,height=700'); 
 						   return false;" >
-						 	<img class="img-thumbnail d-sm-block mx-auto" src="<?= $transfer ?>" style="height: 100px;">
+						 	<img class="img-thumbnail d-sm-block mx-auto" src="<?= $upload_resi ?>" style="height: 100px;">
 						</a>
 						
 		  			</div>
