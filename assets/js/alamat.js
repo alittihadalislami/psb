@@ -124,13 +124,19 @@ function simpanAlamat(){
 	id = desa.substring(0,5);
 
 	if (id != 'Pilih') {
-		$('#alamatModal').modal('hide');
-		$('#alamat').val(toTitleCase(alamat_pengenal)+'\n'+ toTitleCase(alamat_tampil));
-		$('#alamat-simpan').val(alamat_pengenal);
-		$('#desa-id').val(desa);
+		if ( alamat_pengenal != '') 
+		{
+			$('#alamatModal').modal('hide');
+			$('#alamat').val(toTitleCase(alamat_pengenal)+'\n'+ toTitleCase(alamat_tampil));
+			$('#alamat-simpan').val(alamat_pengenal);
+			$('#desa-id').val(desa);
+		}else{
+			alert ('Alamat pengenal untuk rumah silahkan di isi \n(contoh: RT1-RW2 / Gg. Cempaka no.04 / Sebelah Masjid Jami )');
+			$('#alamat-pengenal').focus();
+		}
 
 	}else{
-		alert ('Silahkn pilih alamat dengan lengkap dan benar');
+		alert ('Silahkan pilih alamat dengan lengkap dan benar ');
 	}
 }
 
