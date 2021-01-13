@@ -1,18 +1,18 @@
 <div class="card mt-5 rounded-0">
 	<div class="card-header text-success">
 		<h5 class="h4">Unggah File Pembiayaan</h5>
-		<h5>Ma'had Al Ittihad - 2020</h5>
+		<h5>Ma'had Al Ittihad - 2021</h5>
 	</div>
   	<div class="card-body rounded-0">
 
   		<div class="row">
   			<div class="col-12 pb-5">
   				<a href="<?= base_url('assets/img/biaya.jpg') ?>"  
-				   onclick="window.open('<?= base_url('assets/img/biaya.jpg') ?>', 
+				   onclick="window.open('<?= base_url('assets/img/biaya2021.jpg') ?>', 
 				                         'newwindow', 
 				                         'width=500,height=700'); 
 				   return false;" >
-				 	<img src="<?= base_url('assets/img/biaya.jpg') ?>" width=100%>
+				 	<img src="<?= base_url('assets/img/biaya2021.jpg') ?>" width=70%>
 				</a>
   				
   			</div>
@@ -22,9 +22,9 @@
 	  			Dipersilahkan untuk membayar biaya sebagai tertera diatas. 
 	  				<form class="form-inline ml-0">
 					  <div class="form-group mb-2">
-					    <input type="text" value="Rp. 4.825.000" class="form-control form-control-sm bg-white text-dark" style="font-size: 30px; width: 220px" id="bri1" placeholder="Password" readonly="">
+					    <input type="text" value="Rp. 4.900.000" class="form-control form-control-sm bg-white text-dark" style="font-size: 30px; width: 220px" id="bri1" placeholder="Password" readonly="">
 					  </div>
-					  <button data-nilai="4825000" type="button" class="btn btn-danger btn-sm mb-2 mx-sm-1 d-block mx-auto copy">Salin</button>
+					  <button data-nilai="4900000" type="button" class="btn btn-danger btn-sm mb-2 mx-sm-1 d-block mx-auto copy">Salin</button>
 					</form>
 					<br>
 

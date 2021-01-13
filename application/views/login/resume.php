@@ -1,7 +1,7 @@
 <div class="card mt-5 rounded-0">
 	<div class="card-header text-success">
 		<h5>Status Pendaftaran</h5>
-		<h5>Ma'had Al Ittihad 2020</h5>
+		<h5>Ma'had Al Ittihad 2021</h5>
 	</div>
   <div class="card-body rounded-0">
 	<div class="h4"><?= $data['nama'] ?></div>

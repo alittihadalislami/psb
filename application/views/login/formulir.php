@@ -2,8 +2,8 @@
 	<div class="card-header text-success">
 		<div class="row">
 			<div class="col-12">
-				<h5>Formulir Pendaftaran</h5>
-				<h5 class="h3">Ma'had Al Ittihad 2020</h5>
+				<h5 class="h3">Formulir Pendaftaran</h5>
+				<h5>Ma'had Al Ittihad 2021</h5>
 			</div>
 		</div>
 	</div>

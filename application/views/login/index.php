@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Penerimaan Santri Baru 2020
+    Penerimaan Santri Baru 2021
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -25,7 +25,7 @@
 </head>
 
 <body class="login-page sidebar-collapse">
-  <div class="page-header header-filter" style="background-image: url('../assets/img/home.jpg'); background-size: cover; background-position: top center;">
+  <div class="page-header header-filter" style="background-image: url('../assets/img/home2.jpg'); background-size: cover; background-position: top center;">
     <div class="container">
       <div class="row">
         <?= $this->session->userdata('pesan'); ?>
