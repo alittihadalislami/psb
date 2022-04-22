@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-12">
 				<h5 class="h3">Formulir Pendaftaran</h5>
-				<h5>Ma'had Al Ittihad 2021</h5>
+				<h5>Ma'had Al Ittihad <?= date("Y"); ?></h5>
 			</div>
 		</div>
 	</div>
