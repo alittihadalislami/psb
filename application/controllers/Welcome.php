@@ -96,7 +96,7 @@ class Welcome extends CI_Controller {
 			'nisn' => $daput['nisn']
 		];
 
-    var_dump($daput);die;
+    // var_dump($daput);die;
     
 		if (count($daput) == 2 ) {
       
