@@ -87,8 +87,8 @@ class Welcome extends CI_Controller {
 		echo json_encode($data);
 	}
 
-	function cekData()
-	{
+	function cekData() 
+  {
 		$daput = $this->input->post(null,'true');
 
 		$data_login = [
@@ -96,10 +96,12 @@ class Welcome extends CI_Controller {
 			'nisn' => $daput['nisn']
 		];
 
+    var_dump($daput);die;
+    
 		if (count($daput) == 2 ) {
-			
-			$tersedia2 = $this->mm->cekData($daput);
-			
+      
+      $tersedia2 = $this->mm->cekData($daput);
+		
 			if (count($tersedia2) == 1) {
 				$this->session->set_userdata($data_login);
 				redirect('home','refresh');
