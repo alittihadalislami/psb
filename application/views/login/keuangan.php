@@ -22,15 +22,15 @@
 	  			Dipersilahkan untuk membayar biaya sebagai tertera diatas. 
 	  			<form class="form-inline ml-0">
 					  <div class="form-group mb-2">
-					    <input type="text" value="Rp. 5.800.000" class="form-control form-control-sm bg-white text-dark" style="font-size: 30px; width: 220px" id="bri1" placeholder="Password" readonly="">
+					    <input type="text" value="Rp. 5.850.000" class="form-control form-control-sm bg-white text-dark" style="font-size: 30px; width: 220px" id="bri1" placeholder="Password" readonly="">
 					  </div>
-					  <button data-nilai="5800000" type="button" class="btn btn-danger btn-sm mb-2 mx-sm-1 d-block mx-auto copy">Salin Putra</button>
+					  <button data-nilai="5850000" type="button" class="btn btn-danger btn-sm mb-2 mx-sm-1 d-block mx-auto copy">Salin Putra</button>
 					</form>
           <form class="form-inline ml-0">
 					  <div class="form-group mb-2">
-					    <input type="text" value="Rp. 5.900.000" class="form-control form-control-sm bg-white text-dark" style="font-size: 30px; width: 220px" id="bri1" placeholder="Password" readonly="">
+					    <input type="text" value="Rp. 5.950.000" class="form-control form-control-sm bg-white text-dark" style="font-size: 30px; width: 220px" id="bri1" placeholder="Password" readonly="">
 					  </div>
-					  <button data-nilai="5900000" type="button" class="btn btn-danger btn-sm mb-2 mx-sm-1 d-block mx-auto copy">Salin Putri</button>
+					  <button data-nilai="5950000" type="button" class="btn btn-danger btn-sm mb-2 mx-sm-1 d-block mx-auto copy">Salin Putri</button>
 					</form>
 					<br>
 
