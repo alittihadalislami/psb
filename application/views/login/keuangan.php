@@ -22,32 +22,32 @@
 	  			Dipersilahkan untuk membayar biaya sebagai tertera diatas. 
 	  			<form class="form-inline ml-0">
 					  <div class="form-group mb-2">
-					    <input type="text" value="Rp. 6.000.000" class="form-control form-control-sm bg-white text-dark" style="font-size: 30px; width: 220px" id="bri1" placeholder="Password" readonly="">
+					    <input type="text" value="Rp. 6.220.000" class="form-control form-control-sm bg-white text-dark" style="font-size: 30px; width: 220px" id="bri1" placeholder="Password" readonly="">
 					  </div>
-					  <button data-nilai="6000000" type="button" class="btn btn-danger btn-sm mb-2 mx-sm-1 d-block mx-auto copy">Salin Putra</button>
+					  <button data-nilai="6220000" type="button" class="btn btn-danger btn-sm mb-2 mx-sm-1 d-block mx-auto copy">Salin Putra</button>
 					</form>
           <form class="form-inline ml-0">
 					  <div class="form-group mb-2">
-					    <input type="text" value="Rp. 6.200.000" class="form-control form-control-sm bg-white text-dark" style="font-size: 30px; width: 220px" id="bri1" placeholder="Password" readonly="">
+					    <input type="text" value="Rp. 6.420.000" class="form-control form-control-sm bg-white text-dark" style="font-size: 30px; width: 220px" id="bri1" placeholder="Password" readonly="">
 					  </div>
-					  <button data-nilai="6200000" type="button" class="btn btn-danger btn-sm mb-2 mx-sm-1 d-block mx-auto copy">Salin Putri</button>
+					  <button data-nilai="6420000" type="button" class="btn btn-danger btn-sm mb-2 mx-sm-1 d-block mx-auto copy">Salin Putri</button>
 					</form>
 					<br>
 
-	  				Dengan mentransfer ke Rekening Bendahara Ma'had Al Ittihad Al Islami.
-		  			<br><img src="<?= base_url('assets/img/bri.png') ?>" style="height: 30px; margin-bottom: 10px; margin-top: 10px">
-		  			<strong>an. Muhammad Azhari</strong>
+	  				Dengan mentransfer ke salah satu rekening Bendahara Ma'had Al Ittihad Al Islami, di bawah ini:
+		  			<br><img src="<?= base_url('assets/img/bsi.png') ?>" style="height: 30px; margin-bottom: 10px; margin-top: 10px">
+		  			<br><strong>an. Afnan Ali</strong>
 	  				<form class="form-inline ml-0">
 					  <div class="form-group mb-2">
-					    <input type="text" value="3882-01-016-304-53-4"  class="form-control  bg-white text-dark" style="font-size: 24px;" id="bri1" placeholder="Password" readonly>
+					    <input type="text" value="7278487638"  class="form-control  bg-white text-dark" style="font-size: 24px;" id="bri1" placeholder="Password" readonly>
 					  </div>
 					  <div style="width: 42%" class="d-sm-none"></div>
-					  <button type="button" data-nilai="388201016304534" class="btn btn-danger btn-sm mb-2 mx-sm-1 copy">Salin</button>
+					  <button type="button" data-nilai="7278487638" class="btn btn-danger btn-sm mb-2 mx-sm-1 copy">Salin</button>
 					</form>
 					<br>
 					atau
 		  			<br><img src="<?= base_url('assets/img/bri.png') ?>" style="height: 30px; margin-bottom: 10px; margin-top: 10px">
-		  			<strong>an. Mariatul Jannah</strong>
+                    <br><strong>an. Mariatul Jannah</strong>
 		  			<form class="form-inline ml-0">
 					  <div class="form-group mb-2">
 					    <input type="text" value="0148-01-065-705-50-4" class="form-control bg-white text-dark" id="bri1" style="font-size: 24px" readonly>
