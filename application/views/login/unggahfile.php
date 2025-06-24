@@ -54,7 +54,7 @@
 
   		<div class="row">
   			<div class="col-md-12">
-  				<div class="font-weight-bold">2. SKHU</div>
+  				<div class="font-weight-bold">2. NISN</div>
   				<hr class="mt-0">
   			</div>
   			<div class="col-12 col-md-4">
