@@ -75,7 +75,7 @@
 					<div class="form-group">
 					  <div class="custom-file">
 					    <input type="file" required class="custom-file-input" name="arsip" id="skhu">
-					    <label class="custom-file-label" for="skhu">Pilih file SKHU</label>
+					    <label class="custom-file-label" for="skhu">Pilih file NISN</label>
 					  </div>
 					  <div class="d-none">
 					    <input type="text" name="nama" value="<?= $data['nama'] ?>">
